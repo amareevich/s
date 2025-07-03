@@ -1,0 +1,28 @@
+$aqua-color: rgb(65, 246, 215);
+$pink-color: rgb(255, 62, 121);
+$grey-color: rgb(248, 248, 248);
+$black-grey-color: rgb(126, 126, 130);
+$black-color: rgb(27, 28, 33);
+
+@mixin hover-button {
+    box-shadow: 0 0 2px 1px $pink-color;
+    opacity: 0.9;
+}
+
+@mixin heading-font {
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -0.6px;
+}
+
+@mixin a-font {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+}
+
+@mixin transition-func ($prop) {
+    transition: $prop 0.5s ease;
+}

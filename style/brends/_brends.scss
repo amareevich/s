@@ -1,0 +1,124 @@
+@use '../var';
+
+.brends {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    background-color: var.$grey-color;
+    padding: 24px;
+
+    .button {
+        background: url('/style/button/button_images/dropdown.svg') no-repeat center;
+
+        &:hover {
+            transition: transform 0.5s ease;
+            transform: rotate(360deg);
+        }
+    }
+}
+
+.swiper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 0 24px;
+
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-auto-rows: 72px;
+        grid-column-gap: 32px;
+        grid-row-gap: 16px;
+        transition: height 0.5s ease;
+        padding-bottom: 14px;
+        height: 170px;
+        overflow: hidden;
+    }
+
+    &-slide {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        padding: 16px;
+        border: 1px solid var.$grey-color;
+        border-radius: 6px;
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+        background-color: white;
+    }
+
+    &-pagination {
+        display: none;
+
+        &-bullet {
+            display: none;
+
+            &-active {
+                display: none;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 768px) and (max-width: 1335.8px) {
+    .brends {
+        gap: 16px;
+        background-color: white;
+    }
+
+}
+
+@media (min-width: 300px) and (max-width: 767px) {
+    .brends {
+        width: 100%;
+        align-items: center;
+    }
+
+    .swiper {
+        width: 100%;
+        overflow: hidden;
+
+        &-wrapper {
+            width: 2860px;
+            display: flex;
+            transition: inherit;
+            gap: 0;
+            height: 94px;
+        }
+
+        &-slide {
+            display: flex;
+            min-width: 230px;
+            padding: 16px;
+            height: 72px;
+        }
+
+        &-pagination {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 12px;
+            gap: 8px;
+
+            &-bullet {
+                display: block;
+                width: 12px;
+                height: 12px;
+                border-radius: 45%;
+                background-color: rgb(221, 221, 221);
+                @include var.transition-func(background-color);
+
+                &-active {
+                    background-color: var.$black-grey-color;
+                }
+            }
+        }
+    }
+
+    .unwrap-btn--type--brends {
+        display: none;
+    }
+}

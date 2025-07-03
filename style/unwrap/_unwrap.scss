@@ -1,0 +1,79 @@
+@keyframes open--unwrap {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes close--unwrap {
+    0% {
+        transform: translateY(0) rotate(180deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(180deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(180deg);
+    }
+}
+
+@mixin animation {
+    animation-timing-function: ease;
+    animation-fill-mode: backwards;
+    animation-delay: 0ms;
+    animation-duration: 0.5s;
+}
+
+
+.unwrap-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    height: 24px;
+    width: 120px;
+
+    &__text {
+        white-space: nowrap;
+        padding-left: 32px;
+    }
+
+    &__arrow-img {
+        width: 24px;
+        height: 24px;
+        position: absolute;
+    }
+
+    &--action--open {
+        &:hover {
+            .unwrap-btn__arrow-img {
+                animation-name: open--unwrap;
+                @include animation;
+            }
+        }
+    }
+
+    &--action--close {
+        .unwrap-btn__arrow-img {
+            transform: rotate(180deg);
+        }
+
+        &:hover {
+            .unwrap-btn__arrow-img {
+                animation-name: close--unwrap;
+                @include animation;
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use 'button/button';
+@use 'list/list';
+@use 'unwrap/unwrap';
+@use 'brends/brends';
+
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Regular.woff') format('woff'),
+        url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Medium.woff') format('woff'),
+        url('fonts/TTLakes-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Bold.woff') format('woff'),
+        url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: url('fonts/TTLakes-Bold.woff') format('woff'),
+        url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'TTLakes', Arial, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+    -moz-tap-highlight-color: transparent;
+
+    :focus {
+        outline: none;
+    }
+}
