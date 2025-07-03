@@ -98,7 +98,7 @@
   padding: 24px;
 }
 .brends .button {
-  background: url(525d01f8765bc9511ab5.svg) no-repeat center;
+  background: url(style/button/button_images/dropdown.svg) no-repeat center;
 }
 .brends .button:hover {
   transition: transform 0.5s ease;
