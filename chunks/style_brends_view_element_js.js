@@ -1,0 +1,22 @@
+"use strict";
+/*
+ * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["style_brends_view_element_js"],{
+
+/***/ "./style/brends/view_element.js":
+/*!**************************************!*\
+  !*** ./style/brends/view_element.js ***!
+  \**************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ view_element)\n/* harmony export */ });\nconst btn = document.querySelector('.unwrap-btn--type--brends');\r\nconst changeable_element = document.querySelector('.swiper-wrapper');\r\n\r\nclass Changes {\r\n    constructor(changing_element, modified_element) {\r\n\r\n        //Проверка внутри на наличие элемента, в дальнейшем ее лучше вынести, потому что класс будет задействован в цикле.\r\n        if (!changing_element || !modified_element) {\r\n            throw new Error('Required DOM elements not found');\r\n        }\r\n        // В класс попадает кнопка, ее дочерний элемент и изменяемный элемент с базовыми CSS параметрами высоты\r\n        // Для удобства обработчик клика по кнопке реализован в конструкторе, а не через метод класса \r\n        // Так же создана ссылка для корректного удаления обработчика т.к. используется bind\r\n\r\n        this.changer = changing_element;\r\n        this.changing = modified_element;\r\n        this.window = window;\r\n        this.changer_children_span = this.changer.querySelector('span');\r\n        this.base_height = getComputedStyle(this.changing).height;\r\n        this._link = this.changes_element.bind(this);\r\n        this._reset = this.reset_inline.bind(this);\r\n        this.changer.addEventListener('click', this._link);\r\n    };\r\n\r\n    // Обработчик проверяет наличие базового CSS класса, и в зависимоти от результата меняет высоту + переключает классы\r\n    changes_element() {\r\n        this.window.addEventListener('resize', this._reset);\r\n        const boolean_toggle = this.changer.classList.contains('unwrap-btn--action--open');\r\n        this.changer.classList.toggle('unwrap-btn--action--open');\r\n        this.changer.classList.toggle('unwrap-btn--action--close');\r\n        this.changing_height(boolean_toggle);\r\n    };\r\n\r\n    // Просто выделенный метод для изменения высоты c тернарным оператором :), можно было написать все в changes_element.\r\n    changing_height(flag) {\r\n        flag\r\n            ? (this.changing.style.height = this.changing.scrollHeight + \"px\", this.changer_children_span.textContent = 'Скрыть')\r\n            : (this.changing.style.height = this.base_height, this.changer_children_span.textContent = 'Показать все');\r\n    };\r\n\r\n    // Обнуление стилей и классов элемента при ресайзе для более стабильного отображения элементов\r\n    reset_inline() {\r\n        this.changing.removeAttribute('style');\r\n        this.changer.classList.add('unwrap-btn--action--open');\r\n        this.changer.classList.remove('unwrap-btn--action--close');\r\n        this.changer_children_span.textContent = 'Показать все';\r\n        this.window.removeEventListener('resize', this._reset);\r\n    }\r\n\r\n    // Красная кнопка класса\r\n    destroy() {\r\n        this.changer.removeEventListener('click', this._link);\r\n        this.changing.removeAttribute('style');\r\n        this.changer = null;\r\n        this.changing = null;\r\n        this.changer_children_span = null;\r\n        this.base_height = null;\r\n        this._link = null;\r\n        this._reset = null;\r\n    };\r\n}\r\n\r\nfunction view_element() {\r\n    return new Changes(btn, changeable_element);\r\n}\n\n//# sourceURL=webpack:///./style/brends/view_element.js?");
+
+/***/ })
+
+}]);
