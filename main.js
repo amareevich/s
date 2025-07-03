@@ -16,7 +16,17 @@
   \*******************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    let flag__module__swiper = false;\r\n    let flag__module__desktop = false;\r\n    let module__swiper;\r\n    let module__desktop;\r\n\r\n    async function setListener() {\r\n\r\n        if (window.innerWidth < 767 && flag__module__swiper === false) {\r\n            module__desktop ? module__desktop.destroy() : null;\r\n            flag__module__desktop = false;\r\n            flag__module__swiper = true;\r\n            module__swiper = (await (Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_swiper_modules_index_mjs-node_modules_swiper_swiper_mjs\"), __webpack_require__.e(\"style_brends_swiper_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./style/brends/swiper.js */ \"./style/brends/swiper.js\")))).default();\r\n\r\n        } else if (window.innerWidth > 767 && flag__module__desktop === false) {\r\n            module__swiper ? module__swiper.destroy() : null;\r\n            flag__module__swiper = false;\r\n            flag__module__desktop = true;\r\n            module__desktop = (await (__webpack_require__.e(/*! import() */ \"style_brends_view_element_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./style/brends/view_element.js */ \"./style/brends/view_element.js\")))).default();\r\n        }\r\n    }\r\n\r\n    setListener();\r\n    window.addEventListener('resize', setListener);\r\n})\n\n//# sourceURL=webpack:///./script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_style_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style/style.scss */ \"./style/style.scss\");\n\r\n\r\ndocument.addEventListener('DOMContentLoaded', () => {\r\n    let flag__module__swiper = false;\r\n    let flag__module__desktop = false;\r\n    let module__swiper;\r\n    let module__desktop;\r\n\r\n    async function setListener() {\r\n\r\n        if (window.innerWidth < 767 && flag__module__swiper === false) {\r\n            module__desktop ? module__desktop.destroy() : null;\r\n            flag__module__desktop = false;\r\n            flag__module__swiper = true;\r\n            module__swiper = (await (Promise.all(/*! import() */[__webpack_require__.e(\"vendors-node_modules_swiper_modules_index_mjs-node_modules_swiper_swiper_mjs\"), __webpack_require__.e(\"style_brends_swiper_js\")]).then(__webpack_require__.bind(__webpack_require__, /*! ./style/brends/swiper.js */ \"./style/brends/swiper.js\")))).default();\r\n\r\n        } else if (window.innerWidth > 767 && flag__module__desktop === false) {\r\n            module__swiper ? module__swiper.destroy() : null;\r\n            flag__module__swiper = false;\r\n            flag__module__desktop = true;\r\n            module__desktop = (await (__webpack_require__.e(/*! import() */ \"style_brends_view_element_js\").then(__webpack_require__.bind(__webpack_require__, /*! ./style/brends/view_element.js */ \"./style/brends/view_element.js\")))).default();\r\n        }\r\n    }\r\n\r\n    setListener();\r\n    window.addEventListener('resize', setListener);\r\n})\n\n//# sourceURL=webpack:///./script.js?");
+
+/***/ }),
+
+/***/ "./style/style.scss":
+/*!**************************!*\
+  !*** ./style/style.scss ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack:///./style/style.scss?");
 
 /***/ })
 
