@@ -1,12 +1,22 @@
 @use '../var';
 
+.heading--type--h2 {
+    @include var.a-font;
+    color: var.$black-grey-color;
+    padding: 24px;
+    box-shadow: inset 0 -0.5px 0 0 var.$aqua-color, inset 0 0.5px 0 0 var.$aqua-color;
+    background: linear-gradient(90deg, var.$grey-color, white);
+    user-select: none;
+}
+
 .brends {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 14px;
     background-color: var.$grey-color;
-    padding: 24px;
+    padding: 24px 0;
+
 
     .button {
         background: url('/style/button/button_images/dropdown.svg') no-repeat center;
