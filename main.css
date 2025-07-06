@@ -240,4 +240,5 @@
 }
 * :focus {
   outline: none;
+  user-select: none;
 }
