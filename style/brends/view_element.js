@@ -45,10 +45,12 @@ class Changes {
         this.changer.classList.remove('unwrap-btn--action--close');
         this.changer_children_span.textContent = 'Показать все';
         this.window.removeEventListener('resize', this._reset);
+
     }
 
     // Красная кнопка класса
     destroy() {
+        this.window.removeEventListener('resize', this._reset);
         this.changer.removeEventListener('click', this._link);
         this.changing.removeAttribute('style');
         this.changer = null;

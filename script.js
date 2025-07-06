@@ -1,5 +1,6 @@
 import './style/style.scss';
 
+
 document.addEventListener('DOMContentLoaded', () => {
     let flag__module__swiper = false;
     let flag__module__desktop = false;
@@ -25,3 +26,4 @@ document.addEventListener('DOMContentLoaded', () => {
     setListener();
     window.addEventListener('resize', setListener);
 })
+
