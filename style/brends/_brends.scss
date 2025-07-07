@@ -28,16 +28,6 @@
     }
 }
 
-@keyframes a {
-    0% {
-        height: 170px;
-    }
-
-    100% {
-        height: auto;
-    }
-}
-
 .swiper {
     width: 100%;
     display: flex;
@@ -51,12 +41,11 @@
         grid-auto-rows: 72px;
         grid-column-gap: 32px;
         grid-row-gap: 16px;
-        padding-bottom: 14px;
-        overflow: hidden;
-        height: 170px;
         transition: height 0.5s ease;
+        padding-bottom: 14px;
+        height: 170px;
+        overflow: hidden;
     }
-
 
     &-slide {
         display: flex;
