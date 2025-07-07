@@ -7,21 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function setListener() {
 
-        const newMode = window.innerWidth < 768 ? 'modile' : 'desktop';
+        const newMode = window.innerWidth < 767 ? 'modile' : 'desktop';
 
         if (newMode === mode) return;
+        mode = newMode;
 
         if (newMode === 'modile') {
             desktopInst?.destroy();
             swiperInst = (await import('./style/brends/swiper.js')).default();
-        } else {
+        } else if (newMode === 'desktop') {
             swiperInst?.destroy();
             desktopInst = (await import('./style/brends/view_element.js')).default();
         }
-
-        mode = newMode;
     }
 
     setListener();
     window.addEventListener('resize', setListener);
+
 })
